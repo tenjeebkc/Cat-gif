@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry 🐱</title>
+
+<style>
+body{
+  text-align:center;
+  font-family: Arial, sans-serif;
+  background:#fff0f5dc;
+  padding:30px 15px;
+}
+
+h1{
+  font-size:24px;
+}
+
+p{
+  font-size:18px;
+}
+
+img{
+  width:70%;
+  max-width:250px;
+  border-radius:10px;
+}
+
+.buttons{
+  margin-top:20px;
+}
+
+button{
+  padding: 12px 20px;
+  font-size:18px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+  background:#f080b0;
+  color:white;
+}
+
+#noBtn{
+  position:relative;
+}
+</style>
+</head>
+
+<body>
+
+<h1>I think I was rude... I'm really sorry 🐱</h1>
+
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmRpOGlscDF1dnNhbzdpbDk1cGhkd3dzZDJpZzVmMjAycGxvc3ptMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sLkIthus9lEwoe7PRx/giphy.gif">
+
+<p>
+You didn’t deserve that.  
+I really value our friendship and I feel bad about how I acted.
+</p>
+
+<div class="buttons">
+<button onclick="forgive()">Forgive me 🐾</button>
+<button id="noBtn" onclick="moveButton()">Still mad 😾</button>
+</div>
+
+<script>
+
+function forgive(){
+document.body.innerHTML = `
+<h1>Thank you 🐱</h1>
+<p>You just made my day better.</p>
+<p>I promise to be nicer next time.</p>
+`;
+}
+
+function moveButton(){
+let btn = document.getElementById("noBtn");
+
+let x = Math.random()*200 - 100;
+let y = Math.random()*200 - 100;
+
+btn.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+</script>
+
+</body>
+</html>
